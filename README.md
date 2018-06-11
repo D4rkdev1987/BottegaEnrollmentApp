@@ -13,5 +13,5 @@
 
 ## DONE
 
-~~ Hook React up to Rails~~  
+~~Hook React up to Rails~~  
 ~~Create GitHub Repo~~  
