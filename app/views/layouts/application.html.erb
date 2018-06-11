@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EnrollmentApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body>
+    <%= js add_gritter(flash[:notice], :title => "Notice!", :sticky => false, :time => 1000) %>
+    <%= js add_gritter(flash[:alert], :title => "Alert!", :sticky => false, :time => 1000) %>
+    <%= js add_gritter(flash[:error], :title => "Error!", :sticky => false, :time => 1000) %>
+    <% if current_user %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Register", new_user_registration_path %>
+      <%= link_to "Sign In", new_user_session_path %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

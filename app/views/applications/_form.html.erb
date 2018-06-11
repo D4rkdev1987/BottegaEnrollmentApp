@@ -1,0 +1,102 @@
+<%= form_with(model: application, local: true) do |form| %>
+  <% if application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(application.errors.count, "error") %> prohibited this application from being saved:</h2>
+
+      <ul>
+      <% application.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :course %>
+    <%= form.text_field :course, id: :application_course %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fname %>
+    <%= form.text_field :fname, id: :application_fname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lname %>
+    <%= form.text_field :lname, id: :application_lname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :application_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :application_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street %>
+    <%= form.text_field :street, id: :application_street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street2 %>
+    <%= form.text_field :street2, id: :application_street2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :application_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :application_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip %>
+    <%= form.text_field :zip, id: :application_zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.date_select :dob, id: :application_dob %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.number_field :gender, id: :application_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :military_status %>
+    <%= form.number_field :military_status, id: :application_military_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :education %>
+    <%= form.number_field :education, id: :application_education %>
+  </div>
+
+  <div class="field">
+    <%= form.label :experience %>
+    <%= form.number_field :experience, id: :application_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employment %>
+    <%= form.number_field :employment, id: :application_employment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.number_field :salary, id: :application_salary %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
