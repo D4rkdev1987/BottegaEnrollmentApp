@@ -2,12 +2,7 @@ import React from "react";
 
 class Form extends React.Component {
   state = {
-    firstName: "",
-    lastName: "",
-    username: "",
-    email: "",
-    street_address: "",
-    City: "",
+    
   };
 
   change = e => {
@@ -31,8 +26,6 @@ class Form extends React.Component {
       state: "",
       zip: "",
       month: "",
-      day: "",
-      year: "",
       gender: "",
       military_service: "",
       Education_level: "",
@@ -51,8 +44,6 @@ class Form extends React.Component {
       state: "",
       zip: "",
       month: "",
-      day: "",
-      year: "",
       gender: "",
       military_service: "",
       Education_level: "",
@@ -153,22 +144,7 @@ class Form extends React.Component {
           value={this.state.month}
           onChange={e => this.change(e)}
         />
-
-        <input
-          name="day"
-          type="day"
-          placeholder="day"
-          value={this.state.day}
-          onChange={e => this.change(e)}
-        />
-
-        <input
-          name="year"
-          type="year"
-          placeholder="year"
-          value={this.state.year}
-          onChange={e => this.change(e)}
-        />
+        
         <br />
         <br />
 
